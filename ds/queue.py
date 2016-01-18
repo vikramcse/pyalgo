@@ -51,5 +51,5 @@ class Queue(object):
 		return self.head.item
 
 	def __str__(self):
-        """String representation of the queue."""
-        return " ".join([str(item) for item in self])
+		"""String representation of the queue."""
+		return " ".join([str(item) for item in self])
