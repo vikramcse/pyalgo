@@ -1,14 +1,14 @@
-from nose.tools import *
-
 from ds import (
-	stack,
+    stack,
     queue
 )
+
 
 class TestStack():
     """
     Test Stack Implementation
     """
+
     def test_stack(self):
         self.sta = stack.Stack()
         self.sta.add(5)
@@ -21,10 +21,12 @@ class TestStack():
         assert self.sta.is_empty() == False
         assert self.sta.size() == 3
 
+
 class TestQueue():
     """
     Test Queue Implementation
     """
+
     def test_queue(self):
         self.queue = queue.Queue()
 

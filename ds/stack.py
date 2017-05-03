@@ -6,6 +6,8 @@
     adds an element to the collection, and pop, which removes the last element
     that was added.
 """
+
+
 class Node(object):
     """
     An internal class that represents a node with a single item
@@ -16,8 +18,8 @@ class Node(object):
         self.item = item
         self.next = None
 
-class Stack(object):
 
+class Stack(object):
     def __init__(self):
         self.head = None
         self._size = 0
@@ -30,8 +32,8 @@ class Stack(object):
 
         temp = Node(value)
         temp.next = self.head
-        self.head = temp;
-        self._size = self._size + 1
+        self.head = temp
+        self._size += 1
 
     def remove(self):
         """
@@ -41,9 +43,9 @@ class Stack(object):
         if self.is_empty():
             raise IndexError("pop from empty stack")
 
-        temp = self.head;
+        temp = self.head
         self.head = self.head.next
-        self._size = self._size - 1
+        self._size -= 1
         return temp.item
 
     def is_empty(self):
