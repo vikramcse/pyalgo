@@ -1,13 +1,15 @@
 from nose.tools import *
 
 from math import (
-	gcd
+    gcd
 )
+
 
 class TestStack():
     """
     Test GCD Implementation
     """
+
     def test_gcd(self):
         self.obj = gcd.GCD()
         assert self.obj.gcd([8, 12, 4]) == 4
