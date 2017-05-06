@@ -1,16 +1,19 @@
 from ds import (
     stack,
-    queue
+    queue,
+    linked_list,
 )
 
 
-class TestStack():
+class TestStack:
     """
     Test Stack Implementation
     """
 
-    def test_stack(self):
+    def __init__(self):
         self.sta = stack.Stack()
+
+    def test_stack(self):
         self.sta.add(5)
         self.sta.add(8)
         self.sta.add(10)
@@ -22,14 +25,15 @@ class TestStack():
         assert self.sta.size() == 3
 
 
-class TestQueue():
+class TestQueue:
     """
     Test Queue Implementation
     """
 
-    def test_queue(self):
+    def __init__(self):
         self.queue = queue.Queue()
 
+    def test_queue(self):
         self.queue.isEmpty() == True
 
         self.queue.enqueue(5)
@@ -42,3 +46,24 @@ class TestQueue():
 
         assert self.queue.dequeue() == 5
         assert self.queue.size() == 3
+
+
+class TestLinkedList:
+    def __init__(self):
+        self.ll = linked_list.LinkedList()
+
+        self.ll.append_last(10)
+        self.ll.append_last(20)
+        self.ll.append_last(30)
+
+    def test_linked_list_print(self):
+        assert self.ll.__str__() == '10 20 30'
+
+    def test_linked_list_append_front(self):
+        self.ll.append_front('front1')
+        assert self.ll.__str__() == 'front1 10 20 30'
+        size = self.ll.get_size()
+        assert size == 4
+
+        size = self.ll.get_size()
+        assert size == 4

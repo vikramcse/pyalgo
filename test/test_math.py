@@ -5,7 +5,7 @@ from math import (
 )
 
 
-class TestStack():
+class TestGCD():
     """
     Test GCD Implementation
     """
